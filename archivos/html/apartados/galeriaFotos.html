@@ -3,39 +3,142 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>everything</title>
-    <link rel="favicon" href="../img/favicon.png">
-    <link rel="stylesheet" href="">
+    <title>Proyectaso</title>
+    <link rel="icon" href="./archivos/img/favicon.png" type="image/png">
+    <link rel="stylesheet" href="../../css/style.css">
+    <script src="https://kit.fontawesome.com/a4695a846c.js" crossorigin="anonymous"></script>
 </head>
-
 <body>
-
-    <header>
-        <!-- aca el logo / menú de navegación -->
-        <h1>Título Principal</h1>
-        <nav class="navbar">
-            <ul>
-                <li><a id="inicio" href="#">Inicio</a></li>
-                <li><a href="#">Acerca de</a></li>
-                <li><a href="#">Contacto</a></li>
-            </ul>
-        </nav>
+        <header>
+            <nav class="navbar" id="inicio">
+                <img class="sublogo" src="https://placehold.co/64x64" alt="" class="sublogo">
+                <a  class="navLogo" href="../../../index.html">
+                    <img src="https://placehold.co/150x75?text=NoNameSVG&font=playfairdisplay" alt="img">
+                </a>
+                <button class="menuToggle" onclick="menuToggle()">☰</button>
+                <ul class="bar" id="menu">
+                    <li><a class="itemBar" href="../../html/apartados/galeriaFotos.html">Galeria</a></li>
+                    <li><a class="itemBar" href="../../html/apartados/blog.html">Blog</a></li>
+                    <li><a class="itemBar" href="../../archivos/html/apartados/testModa.html">TestModa</a></li>
+                    <li><a class="itemBar" href="../../archivos/html/contactoForm/iform.html">Contacto</a></li>
+                    <li><a class="itemBar" href="./../archivos/html/apartados/sobreNosotros.html">SobreNosotros</a></li>
+                    <li><a class="itemBar" href="../../archivos/html/apartados/extraContenido/masContenido.html">MasContenido</a></li>
+                </ul>
+            </nav>
+            <div class="lineanav"></div>
+    
     </header>
 
     <main>
-        <!-- contenido principal -->
-        <section class="content">
-            <h2>Subtítulo</h2>
-            <p>Este es un párrafo de ejemplo.</p>
-        </section>
-    </main>
+        <h1>Galeria</h1>
+        <!-- contenido principal /// <section>article>aside>/\/\/\<article(autocontenido, sentido por si mismo)> <aside(contenido relacionado)>--> 
+            <section class="galeria">
+                <div class="imagen">
+                    <img src="../../img/mona.jpg" alt="Descripción de la imagen 1">
+                    <p class="descripcion">Leonardo Dan Vinci: La mona lisa</p>
+                </div>
+                <div class="imagen">
+                    <img src="../../img/rafael.jpg" alt="Descripción de la imagen 2">
+                    <p class="descripcion">Rafael Sanzio: La escuela de Atenas</p>
+                </div>
+                <div class="imagen">
+                    <img src="../../img/susto.jpg" alt="Descripción de la imagen 3">
+                    <p class="descripcion">	Edvard Munch: El Grito</p>
+                </div>
+                <div class="imagen">
+                    <img src="../../img/lajoven.jpg" alt="Descripción de la imagen 1">
+                    <p class="descripcion">Johannes Vermeer: La joven de perla</p>
+                </div>
+                <div class="imagen">
+                    <img src="../../img/mona.jpg" alt="Descripción de la imagen 1">
+                    <p class="descripcion">Leonardo Dan Vinci: La mona lisa</p>
+                </div>
+                <div class="imagen">
+                    <img src="../../img/rafael.jpg" alt="Descripción de la imagen 2">
+                    <p class="descripcion">Rafael Sanzio: La escuela de Atenas</p>
+                </div>
+                <div class="imagen">
+                    <img src="../../img/susto.jpg" alt="Descripción de la imagen 3">
+                    <p class="descripcion">	Edvard Munch: El Grito</p>
+                </div>
+                <div class="imagen">
+                    <img src="../../img/lajoven.jpg" alt="Descripción de la imagen 1">
+                    <p class="descripcion">Johannes Vermeer: La joven de perla</p>
+                </div>
+                <div class="imagen">
+                    <img src="../../img/mona.jpg" alt="Descripción de la imagen 1">
+                    <p class="descripcion">Leonardo Dan Vinci: La mona lisa</p>
+                </div>
+                <div class="imagen">
+                    <img src="../../img/rafael.jpg" alt="Descripción de la imagen 2">
+                    <p class="descripcion">Rafael Sanzio: La escuela de Atenas</p>
+                </div>
+                <div class="imagen">
+                    <img src="../../img/susto.jpg" alt="Descripción de la imagen 3">
+                    <p class="descripcion">	Edvard Munch: El Grito</p>
+                </div>
+                <div class="imagen">
+                    <img src="../../img/lajoven.jpg" alt="Descripción de la imagen 1">
+                    <p class="descripcion">Johannes Vermeer: La joven de perla</p>
+                </div>
+                <div class="imagen">
+                    <img src="../../img/mona.jpg" alt="Descripción de la imagen 1">
+                    <p class="descripcion">Leonardo Dan Vinci: La mona lisa</p>
+                </div>
+                <div class="imagen">
+                    <img src="../../img/rafael.jpg" alt="Descripción de la imagen 2">
+                    <p class="descripcion">Rafael Sanzio: La escuela de Atenas</p>
+                </div>
+                <div class="imagen">
+                    <img src="../../img/susto.jpg" alt="Descripción de la imagen 3">
+                    <p class="descripcion">	Edvard Munch: El Grito</p>
+                </div>
+                
+            </section>
 
-    <footer id="contacto" class="foot">
-        <!-- contacto etc -->
-        <p>&copy; 2024 Mi Sitio Web. Todos los derechos reservados.</p>
-    </footer>
+            <footer id="contacto" class="foot">
+                <!-- contacto etc -->
+                <article>
+                    <ul class="icons">
+                        <li> 
+                            <a target="_blank" href="https://www.instagram.com/midu.dev/">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+                        </li>
+                        <li> 
+                            <a target="_blank" href="https://ar.pinterest.com">
+                                <i class="fa-brands fa-pinterest"></i>
+                            </a>
+                        </li>
+                        <li> 
+                            <a target="_blank" href="https://www.youtube.com">
+                                <i class="fa-brands fa-youtube"></i>
+                            </a>
+                        </li>
+                        <li> 
+                            <a target="_blank" href="https://www.tiktok.com/es/">
+                                <i class="fa-brands fa-tiktok"></i>
+                            </a>
+                        </li>
+                        <li> 
+                            <a target="_blank" href="x.com">
+                                <i class="fa-brands fa-x-twitter"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <p>&copy; 2024 Galeria re contra de Eric. Todos los derechos reservados.</p>
+                </article>
+            </footer>
+        
+            <a href="#inicio" class="botonSubir">
+                🡹
+            </a>
 
-    <script src=""></script> <!-- enlace a JavaScript -->
+    <script src="../../js/script.js"></script> <!-- enlace a JavaScript -->
 </body>
 
 </html>
+
+<!-- details y summary se hace el details desplegable
+    loading lazy para las imagenes y o videos
+    -->

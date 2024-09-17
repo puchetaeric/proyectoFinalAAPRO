@@ -6,10 +6,9 @@
 }
 
 *{
-    margin: 0;
     text-decoration: none;
-    padding: 0;
     box-sizing: border-box;
+    max-width: 100%;
 
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     background-color: var(--ligth-mode);
@@ -22,53 +21,50 @@
     justify-content: space-evenly;
     align-items: center;
     flex-direction: row;
-    padding: 0.5rem 2rem;
+    padding: 0.7rem 2rem;
 }
 
 .lineanav{
     width: 80%;
     height: 0.1rem;
-    background-color: #1C2833;
+    background-color: var(--dark-mode);
     margin: 10px auto;
 }
 
 .sublogo{
-    padding: 1px;
     z-index: 1000;
 }
 
 .navLogo{
-    padding: 1px;
     z-index: 1000;
 }
 
 .menuToggle{
-    background-color: transparent;
     border: none;
     cursor: pointer;
     font-size: 2rem;
     z-index: 1000;
 }
-
 .bar{
+    /*transition: transform 0.3s ease-in-out;*/
     display: none;
     position: fixed;
     width: 100vw;
     height: 100vh;
     top: 0;
     left: 0;
-    background: rgb(0, 0, 0,);
     z-index: 999;
-    transition: transform 0.1s ease-in-out;
+    margin: 0;
+    padding: 0;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     transform: translateY(-100%);
 }
 .bar.active {
+    /*transition: transform 0.3s ease-in-out;*/
     display: flex;
     transform: translateY(0);
-    transition: transform 0.2s ease-in-out;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -76,7 +72,6 @@
 
 .itemBar{
     margin: 1rem;
-    background-color: transparent;
     font-size: 2rem;
     cursor: pointer;
     display: flex;
@@ -91,13 +86,78 @@
     flex-direction: column;
 }
 
-.unh1{
-    padding: 20px;
+.sectiontitulo{
+    display: flex;
+}    
 
+.sectiontitulo h1{
+    padding: 1px;
+}    
+
+.vermas {
+    padding: 10px 10px;
+    background-color: #1C2833;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.vermas:hover {
+    background-color: #162029;
+}
+.vermas:active {
+    background-color: #131b22;
+}  
+
+/* lo html del carrusel NO js */
+
+#carruselCaja {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}    
+button.izquierda, button.derecha {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.3);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 100;
 }
 
+button.izquierda {
+left: 10px;
+}    
+
+button.derecha {
+    right: 10px;
+}
+
+
+
+.carrusel{
+    display: flex;
+    width: 100%;
+    transition: transform 0.10s ease-in-out;
+}        
+
+#cards-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}        
+.carrusel .card{
+    min-width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+}        
+
+
+/* #endregion */
 .card {
-    background-color: #fff;
+    background-color: transparent;
     border-radius: 2px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     width: 350px;
@@ -113,7 +173,7 @@
     
 .card-img {
     width: 100%;
-    height: 100%;
+    height: 500px;
     object-fit: cover;
 }
     
@@ -121,18 +181,96 @@
     padding: 2px;
 }
     
-.card-title {
-    font-size: 1.5em;
-    margin: 10px 0;
-    color: #333;
-}
     
 .card-description {
     font-size: 0.9em;
     color: #777;
     margin-bottom: 5px;
 }
+/* #endregion */
+
+
+
+.artistaDestacado {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 330px;
+}
+
+.artistaInfo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
     
+}
+
+.artistaImg {
+    width: 150px;
+    height: auto;
+    border-radius: 50%;
+}
+
+.biografia {
+    color: var(--dark-mode);
+}
+
+.vangogh{
+    max-width: 150px;
+    border-radius: 8px;
+
+}
+.obraDestacada {
+    margin-top: 2rem;
+}
+
+.obraImg {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.enlaceDetalle {
+    display: inline-block;
+    margin-top: 1rem;
+    color: var(--dark-mode)
+}
+
+.enlaceDetalle:hover {
+    text-decoration: underline;
+}
+
+.foot {
+    padding: 20px;
+    background: var(--dark-mode);
+    text-align: center;
+    margin-top: 8rem;
+}
+.foot article{
+    background: inherit;
+}
+.icons{
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    background: var(--dark-mode);
+}
+.icons li{
+    margin: 0 20px;
+    background: var(--dark-mode);
+}
+.icons a{
+    font-size: 2rem;
+    background: var(--dark-mode);
+}
+
+.foot p{
+    margin-top: 0.5rem;
+    background: inherit;
+    color: var(--ligth-mode);
+
+}
 
 
 .botonSubir{
@@ -147,5 +285,86 @@
     text-align: center;
     z-index: 1000;
     cursor: pointer;
-    transition: opacity 0.3s ease;
+    transition: opacity 0.4s ease-in-out;
+}
+
+/*el apartado*/
+
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1rem;
+}
+
+.imagen {
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    overflow: hidden;
+    background-color: rgb(227, 227, 227);
+}
+
+.imagen img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.descripcion {
+    padding: 0.5rem;
+    background-color: rgb(227, 227, 227);
+    color: #333;
+    text-align: center;
+}
+
+/* apartado contacto*/
+.seccionontacto {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #f7f7f7; /* Fondo blanco-gris */
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.seccionContacto h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #333;
+}
+
+.formularioContacto {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.campoFormulario input {
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    background-color: #eaeaea;
+    color: #333;
+}
+
+.campoFormulario input::placeholder {
+    color: #999;
+}
+
+.campoFormulario input:focus {
+    border-color: #666;
+}
+
+.botonEnviar {
+    padding: 0.75rem;
+    background-color: #666;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.botonEnviar:hover {
+    background-color: #444;
 }

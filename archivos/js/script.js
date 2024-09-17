@@ -6,30 +6,26 @@ function menuToggle() {
 
 const productos = [
     {
-        titulo: "Producto 1",
-        descripcion: "Descripción del producto 1",
-        img: "https://placehold.co/400",
+        titulo: "van gogh",
+        etiquetas: "Descripción del producto 1",
+        img: "./archivos/img/susto.jpg",
     },
     {
-        titulo: "Producto 2",
-        descripcion: "Descripción del producto 2",
+        etiquetas: "Descripción del producto 2",
         img: "https://placehold.co/400",
+        titulo: "",
     },
     {
-        titulo: "Producto 3",
-        descripcion: "Descripción del producto 3",
+        etiquetas: "Descripción del producto 3",
         img: "https://placehold.co/400",
+        titulo: "",
     },
     {
-        titulo: "Producto 4",
-        descripcion: "Descripción del producto 4",
+        etiquetas: "Descripción del producto 4",
         img: "https://placehold.co/400",
+        titulo: "",
     },
-    {
-        titulo: "Producto 5",
-        descripcion: "Descripción del producto 5",
-        img: "https://placehold.co/400",
-    },
+
     ];
     
     const container = document.querySelector("#cards-container");
@@ -38,9 +34,8 @@ const productos = [
     return `
             <div class="card">
                 <img src="${producto.img}" alt="${producto.titulo}" class="card-img">
-                <h2 class="card-title">${producto.titulo}</h2>
                 <div class="card-content">
-                    <p class="card-description">${producto.descripcion}</p>
+                    <p class="card-description">${producto.etiquetas}</p>
                 </div>
             </div>
         `;
@@ -50,4 +45,36 @@ const productos = [
     container.innerHTML += crearCard(producto);
     });
     
+    const botonDerecha = document.querySelector(".derecha")
+    const botonIzquierda = document.querySelector(".izquierda")
+    const contenedorCarrusel = document.querySelector(".carrusel")
+//no olvidar usae let cuando vas a cambiar la variable
+    let actual = 0
+    const totalDeCards = document.querySelectorAll(".card").length
+    
+    
+    botonDerecha.addEventListener("click", () => {
+        if (actual < totalDeCards - 1) {
+            actual++
+        } else {
+            actual = 0
+        }
+        actualizarCarrusel()
+    })
+
+    botonIzquierda.addEventListener("click", () => {
+        if (actual > 0) {
+            actual--
+        } else {
+            actual = totalDeCards - 1
+        }
+        actualizarCarrusel()
+    })
+
+    function actualizarCarrusel() {
+        const anchoCarrusel = contenedorCarrusel.clientWidth;
+        const nuevoDesplazamiento = -anchoCarrusel * actual;
+        contenedorCarrusel.style.transform = `translateX(${nuevoDesplazamiento}px)`;
+    }
+
 

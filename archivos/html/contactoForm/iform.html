@@ -5,31 +5,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario</title>
     <link rel="icon" href="../../img/favicon.png" type="image/png">
-    <link rel="stylesheet" href="../../css/styleform/sform.css">
+    <link rel="stylesheet" href="../../css/style.css">
 </head>
 <body>
+    <nav class="navbar" id="inicio">
+        <img class="sublogo" src="https://placehold.co/64x64" alt="" class="sublogo">
+        <a  class="navLogo" href="">
+            <img src="https://placehold.co/150x75?text=Galery of Art&font=playfairdisplay" alt="img">
+        </a>
+        <button class="menuToggle" onclick="menuToggle()">☰</button>
+        <ul class="bar" id="menu">
+            <li><a class="itemBar" href="./archivos/html/apartados/galeriaFotos.html">Galeria</a></li>
+            <li><a class="itemBar" href="./archivos/html/apartados/blog.html">Blog</a></li>
+            <li><a class="itemBar" href="./archivos/html/apartados/testModa.html">TestModa</a></li>
+            <li><a class="itemBar" href="./archivos/html/contactoForm/iform.html">Contacto</a></li>
+            <li><a class="itemBar" href="./archivos/html/apartados/sobreNosotros.html">SobreNosotros</a></li>
+            <li><a class="itemBar" href="./archivos/html/apartados/extraContenido/masContenido.html">MasContenido</a></li>
+        </ul>
+    </nav>
+    <div class="lineanav"></div>
+
     
     <footer>
-        <div class="form">
-            <div class="formInput">
-                <label>Email
-                    <input type="text" placeholder="Ejemplo@gmail.com">
-                </label>
-            </div>
-            <div class="formInput">
-                <label>
-                    <select name="typeOfUser" id="typeOfUser">
-                        <option value="user1">opcion1</option>
-                        <option value="user2">opcion2</option>
-                    </select>
-                </label>
-            </div>
-            <div class="formInput">
-                <label>Acepto los <span><a href="./terms.html" target="_blank">terminos y condiciones</a></span>
-                    <input type="checkbox" class="checkbox">
-                </label>
-            </div>
-        </div>
+        <section class="seccionContacto">
+            <h2>Envíanos un mensaje</h2>
+            <form action="#" method="POST" class="formularioContacto">
+                <div class="campoFormulario">
+                    <input type="text" name="nombre" placeholder="Nombre" required>
+                </div>
+
+                <div class="campoFormulario">
+                    <input type="email" name="email" placeholder="Correo electrónico" required>
+                </div>
+
+                <div class="campoFormulario">
+                    <input type="text" name="mensaje" placeholder="Mensaje" required>
+                </div>
+
+                <div class="campoFormulario">
+                    <button type="submit" class="botonEnviar">Enviar</button>
+                </div>
+            </form>
+        </section>
     </footer>
 </body>
 </html>
