@@ -6,24 +6,24 @@ function menuToggle() {
 
 const productos = [
     {
-        titulo: "van gogh",
-        etiquetas: "Descripción del producto 1",
+        titulo: "El grito-Munch",
         img: "./archivos/img/susto.jpg",
+        etiquetas: "#arte #Munch",
     },
     {
-        etiquetas: "Descripción del producto 2",
-        img: "https://placehold.co/400",
-        titulo: "",
+        titulo: "noche.jpg",
+        img: "./archivos/img/noche.jpg",
+        etiquetas: "#Van Gogh",
     },
     {
-        etiquetas: "Descripción del producto 3",
-        img: "https://placehold.co/400",
-        titulo: "",
+        titulo: "lajoven.jpg",
+        img: "./archivos/img/lajoven.jpg",
+        etiquetas: "#Johannes Vermeer",
     },
     {
-        etiquetas: "Descripción del producto 4",
-        img: "https://placehold.co/400",
-        titulo: "",
+        titulo: "rafael.jpg",
+        img: "./archivos/img/rafael.jpg",
+        etiquetas: "#Rafael Sanzio",
     },
 
     ];
